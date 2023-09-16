@@ -11,6 +11,7 @@
     overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido se desborda */
     margin: 0 auto;
     background: #FF595E;
+    margin-right: 0px;
   }
   
   .card h3 {
