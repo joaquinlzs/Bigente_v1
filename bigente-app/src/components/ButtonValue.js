@@ -1,5 +1,5 @@
 import React from 'react';
-import './ButtonValue.css';
+import './CSS/ButtonValue.css';
 import { useSelector } from 'react-redux';
 
 function ButtonValue() {

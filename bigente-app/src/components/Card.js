@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import './CSS/Card.css';
 
 function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
   return (
