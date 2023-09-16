@@ -3,9 +3,14 @@ import './CSS/Card.css';
 
 function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
   const [isSpoilerVisible, setSpoilerVisibility] = useState(false);
+  const [isThumbnailVisible, setThumbnailVisibility] = useState(false);
 
   const toggleSpoiler = () => {
     setSpoilerVisibility(!isSpoilerVisible);
+  };
+
+  const toggleThumbnail = () => {
+    setThumbnailVisibility(!isThumbnailVisible);
   };
   
   return (
@@ -24,13 +29,21 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
           </div>
         )
       )}
-      
-      <div>
-        {thumbnail !== "self" ? <img src={thumbnail} alt="Imagen Reddit" /> : null}
-      </div>
+
+      {thumbnail !== "self" && (
+        isThumbnailVisible ? (
+          <div>
+            <img src={thumbnail} alt="Imagen Reddit" />
+            <button className="buttontext" onClick={toggleThumbnail}>Ocultar imagen</button>
+          </div>
+        ) : (
+          <div>
+            <button className="buttontext" onClick={toggleThumbnail}>Mostrar imagen</button>
+          </div>
+        )
+      )}
       
       <p>Score: {score}</p>
-      
     </div>
   );
 }
