@@ -21,11 +21,15 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
         isSpoilerVisible ? (
           <div>
             <p>{selftext}</p>
-            <button className="buttontext" onClick={toggleSpoiler}>Ocultar texto</button>
+            <button className="buttontext" onClick={toggleSpoiler}>
+              <i className="fa-solid fa-comment-slash"></i>
+            </button>
           </div>
         ) : (
           <div>
-            <button className="buttontext" onClick={toggleSpoiler}>Mostrar texto</button>
+            <button className="buttontext" onClick={toggleSpoiler}>
+              <i className="fa-solid fa-comment"></i>
+            </button>
           </div>
         )
       )}
@@ -34,11 +38,15 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
         isThumbnailVisible ? (
           <div>
             <img src={thumbnail} alt="Imagen Reddit" />
-            <button className="buttontext" onClick={toggleThumbnail}>Ocultar imagen</button>
+            <button className="buttontext" onClick={toggleThumbnail}>
+            <i className="fa-regular fa-eye-slash"></i>
+            </button>
           </div>
         ) : (
           <div>
-            <button className="buttontext" onClick={toggleThumbnail}>Mostrar imagen</button>
+            <button className="buttontext" onClick={toggleThumbnail}>
+              <i className="fa-regular fa-eye"></i>
+            </button>
           </div>
         )
       )}
