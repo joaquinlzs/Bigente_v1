@@ -1,23 +1,63 @@
-import logo from './logo.svg';
+import { useSelector } from 'react-redux';
 import './App.css';
+import ButtonValue from './components/ButtonValue';
+import Card from './components/Card';
+import Header from './components/Header';
+import React, { useEffect, useState } from 'react';
 
 function App() {
+  const [data, setData] = useState(null);
+  const buttonName = useSelector(state => state.navbar);
+
+  useEffect(() => {
+    const subredditName = buttonName;
+    const apiUrl = `https://www.reddit.com/r/${subredditName}.json`;
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(apiData => {
+        setData(apiData)
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, [buttonName]);
+  
+
+  const cards = [];
+  if (data) {
+    for (let i = 0; i < data.data.children.length; i++) {
+      const post = data.data.children[i];
+      cards.push(
+        <Card
+          key={i}
+          title={post.data.title}
+          subreddit={post.data.subreddit}
+          score={post.data.score}
+          selftext={post.data.selftext}
+          thumbnail={post.data.thumbnail}
+          permalink={post.data.permalink}
+        />
+      );
+    }
+  }
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <ButtonValue />
+      {data ? (
+        <div> 
+          {cards}
+        </div>
+      ) : (
+        <div>Cargando...</div>
+      )
+    }
+      
     </div>
   );
 }
