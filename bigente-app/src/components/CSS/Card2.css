@@ -1,0 +1,65 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+
+.card h2 {
+    margin: 0px;
+    font-size: 20px;
+}
+.card h5 {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.card a {
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;color: gray;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card {
+    width: 230px;
+    max-height: 200px;
+    padding: 12px;
+    border: black;
+    background-color: white;
+    border-radius: 10px; /* Ajusta el radio de los bordes según tus preferencias */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombreado */
+}
+
+.title {
+    color: black;
+    margin: 2px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2; /* Ajusta la altura de línea según tus preferencias */
+    -webkit-line-clamp: 4; /* Establece el máximo de 2 líneas */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+.author {
+    color: gray;
+    margin: 2px 0px;
+
+}
+
+.label {
+    border: 0px;
+}
+
+.text {
+    border: 0px;
+}
+
+.cardFooter {
+    border: 0px;
+}
+
+.dateRelease {
+    border: 0px;
+}
+
+.flipButton {
+    border: 0px;
+}

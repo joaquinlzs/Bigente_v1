@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
 import './App.css';
 import '../src/components/CSS/Cardcontainer.css'
-import Card from './components/Card';
+//import Card from './components/Card';
+import Card2 from './components/Card2';
 import Header from './components/Header';
 import React, { useEffect, useState } from 'react';
 
@@ -29,7 +30,7 @@ function App() {
     for (let i = 0; i < data.data.children.length; i++) {
       const post = data.data.children[i];
       cards.push(
-        <Card
+        <Card2
           key={i}
           title={post.data.title}
           subreddit={post.data.subreddit}
