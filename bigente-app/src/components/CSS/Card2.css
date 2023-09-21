@@ -2,6 +2,7 @@
 
 .card h2 {
     margin: 0px;
+    padding: 0px;
     font-size: 20px;
 }
 .card h5 {
@@ -29,7 +30,7 @@
 
 .title {
     color: black;
-    margin: 2px 0px;
+    margin: 6px 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.2; /* Ajusta la altura de línea según tus preferencias */
@@ -40,7 +41,7 @@
 
 .author {
     color: gray;
-    margin: 2px 0px;
+    margin: 6px 0px;
 
 }
 
