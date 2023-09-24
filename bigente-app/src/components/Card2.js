@@ -1,42 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CSS/Card2.css';
 import Tag from './Tag';
 
-// Importa las clases de FontAwesome para icono del enlace
-
 function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
+    const [flipped, setFlipped] = useState(false);
+    const flipCard = () => {
+        setFlipped(!flipped);
+    };
 
     return (
-    <div className="card">
-        <div className="title">
-            <h2>
-                {title}
-            </h2>
-        </div>
-        <div className="author">
-            <h5>
-                by {subreddit[0].toUpperCase() + subreddit.slice(1)}&nbsp;
-                <a href={`https://www.reddit.com${permalink}`}>
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </a>
-            </h5>
-            </div>
-        <div className="label">
-            <Tag text={"Litio"} color={"purple"}/>
-            <Tag text={"PV"} color={"gold"}/>
-        </div>
-        <div className="text">
-            Texto 
-        </div>
-        <div classname="cardFooter">
-            <div className="dateRelease">
-            </div>
-            <div className="flipButton">
+    <div className={`card ${flipped ? 'flipped' : ''}`} onClick={flipCard}>
+        <div className="card-inner">
+
+            <div className="card-front">
+                <div className="title">
+                    <h2>
+                        {title}
+                    </h2>
+                </div>
+                <div className="author">
+                    <h5>
+                        by {subreddit[0].toUpperCase() + subreddit.slice(1)}&nbsp;
+                        <a href={`https://www.reddit.com${permalink}`}>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </h5>
+                    </div>
+                <div className="label">
+                    <Tag text={"Litio"} color={"purple"}/>
+                    <Tag text={"PV"} color={"gold"}/>
+                </div>
             </div>
 
+            <div className="card-back">
+                <div className="text">
+                    Texto 
+                </div>
+            </div>
+            
         </div>
     </div>
-    
 
     );
 }
