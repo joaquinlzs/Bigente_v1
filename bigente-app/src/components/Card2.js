@@ -4,8 +4,12 @@ import Tag from './Tag';
 
 function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
     const [flipped, setFlipped] = useState(false);
+    const hasSelftext = selftext && selftext.trim().length > 0;
+
     const flipCard = () => {
+        if (hasSelftext) {
         setFlipped(!flipped);
+        }
     };
 
     return (
