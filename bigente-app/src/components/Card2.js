@@ -12,7 +12,7 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
     <div className={`card ${flipped ? 'flipped' : ''}`} onClick={flipCard}>
         <div className="card-inner">
 
-            <div className="card-front">
+            <div className={`card-front ${flipped ? 'hidden' : ''}`}>
                 <div className="title">
                     <h2>
                         {title}
@@ -32,12 +32,12 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
                 </div>
             </div>
 
-            <div className="card-back">
+            <div className={`card-back ${flipped ? '' : 'hidden'}`}>
                 <div className="text">
-                    Texto 
+                    {selftext} 
                 </div>
             </div>
-            
+
         </div>
     </div>
 

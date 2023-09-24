@@ -26,6 +26,7 @@
     background-color: white;
     border-radius: 10px; /* Ajusta el radio de los bordes según tus preferencias */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombreado */
+    cursor: pointer;
 }
 
 .title {
@@ -45,22 +46,29 @@
 
 }
 
-.label {
-    border: 0px;
+.card-back {
+    display: none; /* Oculta la tarjeta en el dorso por defecto */
+    max-height: 150px; /* Establece una altura máxima según tus preferencias */
+    overflow-y: auto; /* Habilita el desplazamiento vertical cuando sea necesario */
+    font-size: 14px;
 }
 
-.text {
-    border: 0px;
+
+.card.flipped .card-front {
+    display: none; /* Oculta el frente cuando la tarjeta está volteada */
 }
 
-.cardFooter {
-    border: 0px;
+.card.flipped .card-back {
+    display: block; /* Muestra el dorso cuando la tarjeta está volteada */
 }
 
-.dateRelease {
-    border: 0px;
+/* Cambia el color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento vertical */
 }
 
-.flipButton {
-    border: 0px;
+  /* Cambia el color del "pulgar" o la parte desplazable de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: black; /* Cambia el color del pulgar */
+    border-radius: 6px; /* Agrega bordes redondeados al pulgar */
 }
