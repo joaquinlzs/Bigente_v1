@@ -39,9 +39,11 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
                         <i class="fa-regular fa-calendar"></i>&nbsp;
                         48 hours
                     </div>
+                    {hasSelftext && (
                     <div className="flipButton">
                         <i class="fa-solid fa-repeat"></i>
                     </div>
+                    )}
                 </div>
             </div>
 
