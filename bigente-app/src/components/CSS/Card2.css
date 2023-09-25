@@ -3,7 +3,7 @@
 .card h2 {
     margin: 0px;
     padding: 0px;
-    font-size: 20px;
+    font-size: 18px;
 }
 .card h5 {
     margin: 0px;
@@ -20,13 +20,14 @@
 
 .card {
     width: 230px;
-    max-height: 200px;
+    height: 170px;
     padding: 12px;
     border: black;
     background-color: white;
     border-radius: 10px; /* Ajusta el radio de los bordes según tus preferencias */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombreado */
     cursor: pointer;
+    position: relative;
 }
 
 .title {
@@ -35,7 +36,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.2; /* Ajusta la altura de línea según tus preferencias */
-    -webkit-line-clamp: 4; /* Establece el máximo de 2 líneas */
+    -webkit-line-clamp: 3; /* Establece el máximo de 2 líneas */
     -webkit-box-orient: vertical;
     display: -webkit-box;
 }
@@ -71,4 +72,24 @@
 ::-webkit-scrollbar-thumb {
     background-color: black; /* Cambia el color del pulgar */
     border-radius: 6px; /* Agrega bordes redondeados al pulgar */
+}
+
+.footer {
+    position: absolute; /* Establece la posición absoluta en el footer */
+    bottom: 0; /* Fija el footer en la parte inferior del componente */
+    left: 0; /* Alinea el footer a la izquierda del componente */
+    right: 0; /* Alinea el footer a la derecha del componente */
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.date {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.flipButton {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
 }

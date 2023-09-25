@@ -34,6 +34,15 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
                     <Tag text={"Litio"} color={"purple"}/>
                     <Tag text={"PV"} color={"gold"}/>
                 </div>
+                <div className="footer">
+                    <div className="date">
+                        <i class="fa-regular fa-calendar"></i>&nbsp;
+                        48 hours
+                    </div>
+                    <div className="flipButton">
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                </div>
             </div>
 
             <div className={`card-back ${flipped ? '' : 'hidden'}`}>
