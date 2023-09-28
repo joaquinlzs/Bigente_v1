@@ -5,6 +5,7 @@ import '../src/components/CSS/Cardcontainer.css'
 import Card2 from './components/Card2';
 import Header from './components/Header';
 import React, { useEffect, useState } from 'react';
+import randomTags from './functions/tagFunction';
 
 function App() {
   const [data, setData] = useState(null);
@@ -38,6 +39,7 @@ function App() {
           selftext={post.data.selftext}
           thumbnail={post.data.thumbnail}
           permalink={post.data.permalink}
+          tags = {randomTags()}
         />
       );
     }

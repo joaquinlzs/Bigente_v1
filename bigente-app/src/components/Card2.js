@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './CSS/Card2.css';
 import Tag from './Tag';
 
-function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
+
+function Card({ title, subreddit, selftext, score, thumbnail, permalink, tags }) {
     const [flipped, setFlipped] = useState(false);
     const hasSelftext = selftext && selftext.trim().length > 0;
 
@@ -31,8 +32,9 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink }) {
                     </h5>
                     </div>
                 <div className="label">
-                    <Tag text={"Litio"} color={"purple"}/>
-                    <Tag text={"PV"} color={"gold"}/>
+                    {tags.map(tag => (
+                        <Tag text={tag} color={"gray"}/>
+                    ))}
                 </div>
                 <div className="footer">
                     <div className="date">
