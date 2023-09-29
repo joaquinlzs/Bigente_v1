@@ -40,6 +40,7 @@ function App() {
           thumbnail={post.data.thumbnail}
           permalink={post.data.permalink}
           tags = {randomTags()}
+          created = {post.data.created}
         />
       );
     }

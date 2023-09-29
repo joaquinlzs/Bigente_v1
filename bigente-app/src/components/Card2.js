@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './CSS/Card2.css';
 import Tag from './Tag';
+import tiempoPasadoHastaHoy from '../functions/dateUnix';
 
-
-function Card({ title, subreddit, selftext, score, thumbnail, permalink, tags }) {
+function Card({ title, subreddit, selftext, score, thumbnail, permalink, tags, created }) {
     const [flipped, setFlipped] = useState(false);
     const hasSelftext = selftext && selftext.trim().length > 0;
 
@@ -39,7 +39,7 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink, tags })
                 <div className="footer">
                     <div className="date">
                         <i class="fa-regular fa-calendar"></i>&nbsp;
-                        48 hours
+                        {tiempoPasadoHastaHoy(created)}
                     </div>
                     {hasSelftext && (
                     <div className="flipButton">

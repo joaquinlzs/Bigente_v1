@@ -17,17 +17,31 @@ function tiempoPasadoHastaHoy(timestamp) {
     const minutos = duracion.getUTCMinutes();
     const segundos = duracion.getUTCSeconds();
 
-    return {
-        años,
-        meses,
-        días,
-        horas,
-        minutos,
-        segundos
-    };
+    if (años !== 0) {
+        return `${años} años`;
+    } else if (meses !== 0) {
+        return `${meses} meses`;
+    } else if (días !== 0) {
+        if (días === 1) {
+            return `1 día`;
+        } else {
+            return `${días} días`;
+        }
+    } else if (horas !== 0) {
+        if (horas === 1) {
+            return `1 hora`;
+        } else {
+            return `${horas} horas`;
+        }
+    } else if (minutos !== 0) {
+        if (minutos === 1) {
+            return `1 minuto`;
+        } else {
+            return `${minutos} minutos`;
+        }
+    } else {
+        return `${segundos} segundos`;
+    }
 }
 
-// Ejemplo de uso:
-const timestampUnix = 1695855707.0; // Reemplaza con el timestamp Unix que desees
-const resultado = tiempoPasadoHastaHoy(timestampUnix);
-console.log(resultado);
+export default tiempoPasadoHastaHoy;
