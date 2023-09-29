@@ -30,6 +30,10 @@
     position: relative;
 }
 
+.card:hover {
+    border: 2px solid black; /* Cambia el borde al color deseado al pasar el mouse */
+}
+
 .title {
     color: black;
     margin: 6px 0px;
