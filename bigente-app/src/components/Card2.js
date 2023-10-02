@@ -13,8 +13,20 @@ function Card({ title, subreddit, selftext, score, thumbnail, permalink, tags, c
         }
     };
 
+    function getRandomCardSize() {
+        const cardSizes = ['card-small', 'card-medium', 'card-large'];
+        const randomIndex = Math.floor(Math.random() * cardSizes.length);
+        return cardSizes[randomIndex];
+    }
+    
+    // Ejemplo de uso:
+    const randomCardSize = getRandomCardSize();
+
     return (
-    <div className={`card ${flipped ? 'flipped' : ''}`} onClick={flipCard}>
+    <div 
+        className={`card ${flipped ? 'flipped' : ''} ${getRandomCardSize()}`} 
+        onClick={flipCard}
+    >
         <div className="card-inner">
 
             <div className={`card-front ${flipped ? 'hidden' : ''}`}>

@@ -1,8 +1,9 @@
 .cardscontainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crea columnas automáticas con un ancho mínimo de 300px */
-    gap: 12px; /* Espacio entre las tarjetas */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+    justify-content: center;
     padding: 20px;
-
+    grid-auto-flow: row; /* Cambia el flujo automático a vertical */
 }
+
