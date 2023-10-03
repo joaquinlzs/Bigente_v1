@@ -99,16 +99,19 @@
 }
 
 .card-small {
-    grid-column: span 1; /* Tamaño pequeño para la tarjeta */
+    grid-column: span 7; /* Tamaño pequeño para la tarjeta */
+    grid-row: span 7;
     /* Otros estilos para las tarjetas pequeñas */
 }
 
 .card-medium {
-    grid-column: span 2; /* Tamaño mediano para la tarjeta */
+    grid-column: span 10; /* Tamaño mediano para la tarjeta */
+    grid-row: span 10;
     /* Otros estilos para las tarjetas medianas */
 }
 
 .card-large {
-    grid-column: span 3; /* Tamaño grande para la tarjeta */
+    grid-column: span 15; /* Tamaño grande para la tarjeta */
+    grid-row: span 15;
     /* Otros estilos para las tarjetas grandes */
 }
