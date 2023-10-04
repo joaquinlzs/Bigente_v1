@@ -7,6 +7,7 @@
 
     /* Utiliza minmax para establecer un tamaño fijo de las filas y columnas en píxeles */
     grid-template-rows: repeat(auto-fill, minmax(15px, 1fr)); /* Filas de altura mínima de 200px */
-    grid-template-columns: repeat(auto-fill, minmax(15px, 1fr)); /* Columnas de ancho mínimo de 200px */
+    grid-template-columns: repeat(auto-fill, minmax(15px, 1fr)); /* Columnas de ancho mínimo de 200px */ 
+
 }
 
