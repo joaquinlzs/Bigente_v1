@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     const subredditName = buttonName;
     const apiUrl = `https://www.reddit.com/r/${subredditName}.json`;
+    //const apiUrl2 = `https://www.reddit.com/r/Chilefit.json`;
 
     fetch(apiUrl)
       .then(response => response.json())
