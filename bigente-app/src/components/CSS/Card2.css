@@ -96,4 +96,25 @@
 .flipButton {
     display: flex;
     align-items: center; /* Centra verticalmente el contenido */
+<<<<<<< Updated upstream
+=======
+}
+
+.card-small {
+    grid-column: span 6; /* Tamaño pequeño para la tarjeta */
+    grid-row: span 5;
+    /* Otros estilos para las tarjetas pequeñas */
+}
+
+.card-medium {
+    grid-column: span 8; /* Tamaño mediano para la tarjeta */
+    grid-row: span 5;
+    /* Otros estilos para las tarjetas medianas */
+}
+
+.card-large {
+    grid-column: span 14; /* Tamaño grande para la tarjeta */
+    grid-row: span 5;
+    /* Otros estilos para las tarjetas grandes */
+>>>>>>> Stashed changes
 }
