@@ -1,22 +1,24 @@
-const sourceList = {
+const sourceListChile = {
     2001: {
         name: "Subreddit Chile",
         type: "reddit",
-        link: "https://www.reddit.com/r/chile/",
+        link: "https://www.reddit.com/r/chile",
         comments: "Primer subreddit",
     },
 
     2002: {
         name: "Subreddit Chile Cringe",
         type: "reddit",
-        link: "https://www.reddit.com/r/ChileCringe/",
+        link: "https://www.reddit.com/r/ChileCringe",
         comments: "Segundo subreddit",
     },
 
     2003: {
         name: "Subreddit ChileFit",
         type: "reddit",
-        link: "https://www.reddit.com/r/Chilefit/",
+        link: "https://www.reddit.com/r/Chilefit",
         comments: "Tercer subreddit"
     },
 }
+
+module.exports = sourceListChile;
