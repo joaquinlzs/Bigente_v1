@@ -16,8 +16,22 @@ async function fetchDataReddit(idSource) {
     } catch (error) {
         console.log('Error de codigo');
     }
-    console.log(rawData[0][7])
+    const prettyData = rawData[0].map(post => ({
+        title: post.data.title,
+        score: post.data.score,
+        subreddit: post.data.subreddit,
+        text: post.data.selftext,
+        link: post.data.permalink,
+        date: post.data.created,
+    }));
+    return(prettyData)
 }
 
-fetchDataReddit(sourceListChile['2001'])
+async function main() {
+    const data = await fetchDataReddit(sourceListChile['2002']);
+    console.log(data);
+}
+
+main();
+
 
